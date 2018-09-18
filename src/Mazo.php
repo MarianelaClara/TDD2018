@@ -14,11 +14,4 @@ protected $cantcartas=0;
         return TRUE;
      return FALSE;
   }
-   
-   
-
-
-
-
-
 }
