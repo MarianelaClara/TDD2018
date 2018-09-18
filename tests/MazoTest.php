@@ -18,6 +18,10 @@ class MazoTest extends TestCase {
         $mazo = new Mazo;
         $this->assertTrue($mazo->mezclar());
     }
+	
+    public function testVacio(){
+	$mazo= new Mazo;
+	$assertTrue($mazo->vacio());   
+    }
 
-
-}
+    
