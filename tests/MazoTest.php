@@ -21,7 +21,7 @@ class MazoTest extends TestCase {
 	
     public function testVacio(){
 	$mazo= new Mazo;
-	$assertTrue($mazo->vacio());   
+	$this->assertTrue($mazo->vacio());   
     }
 }
 
