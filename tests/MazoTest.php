@@ -20,8 +20,16 @@ class MazoTest extends TestCase {
     }
 	
     public function testVacio(){
-	$mazo= new Mazo;
-	$this->assertTrue($mazo->vacio());   
+	    $mazo= new Mazo;
+	    $this->assertTrue($mazo->vacio());   
+    }
+
+    public function testAgregarCarta() {
+        $mazo= new Mazo;
+        $mazoVacio= new Mazo;
+        $carta= new Cartas("Basto", 3);
+        $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertFalse($this->assertEquals($mazo, $mazoVacio));
     }
 }
 
