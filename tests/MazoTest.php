@@ -29,7 +29,6 @@ class MazoTest extends TestCase {
         $mazoVacio= new Mazo;
         $carta= new Cartas("Basto", 3);
         $this->assertTrue($mazo->agregarCarta($carta));
-        $this->assertFalse($this->assertEquals($mazo, $mazoVacio));
     }
 }
 
