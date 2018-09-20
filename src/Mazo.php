@@ -3,14 +3,14 @@
 namespace TDD;
 
 class Mazo {
-protected $cantcartas=0;
+  protected $cantcartas=0;
 
   public function mezclar() {
     return TRUE;
   }
 
   public function vacio() {
-    if($cantcartas==0)
+    if($this->cantcartas == 0)
         return TRUE;
      return FALSE;
   }
