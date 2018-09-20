@@ -15,4 +15,9 @@ class CartasTest extends TestCase {
 		$cartas = new Cartas("Basto", 3);
 		$this->assertEquals($cartas->obtenerPalo(),"Basto");
 	}
+
+	public function testNumero() {
+		$cartas = new Cartas("Basto", 3);
+		$this->assertEquals($cartas->obtenerNumero(), 3);
+	}
 }
