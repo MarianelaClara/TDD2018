@@ -21,4 +21,8 @@ class Mazo {
     return TRUE;
   }
 
+  public function obtenerCant() {
+    return $this->cantcartas;
+  }
+
 }
