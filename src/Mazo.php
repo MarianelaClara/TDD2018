@@ -5,7 +5,23 @@ namespace TDD;
 class Mazo {
   protected $cantcartas=-1;
   protected $cajita=[];
+
   public function mezclar() {
+    if($this->cantcartas == -1 || $this->cantcartas== 0)
+      return TRUE;
+    $inicio=0;
+    $final= $this->cantcartas;
+    $mezcla=[];
+    $punt=0;
+    for(; $inicio != $final && $inicio<$final; $inicio++, $final --){
+      $mezcla[$punt]=$this->cajita[$final];
+      $punt ++;
+      $mezcla[$punt]=$this->cajita[$inicio];
+      $punt ++;
+    }
+    if(($this->cantcartas%2)== 0)
+      $mezcla[$punt]=$this->cajita[$inicio];
+    $this->cajita= $mezcla;
     return TRUE;
   }
 
