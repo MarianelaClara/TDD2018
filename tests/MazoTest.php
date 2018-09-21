@@ -16,7 +16,24 @@ class MazoTest extends TestCase {
 
     public function testMezclable() {
         $mazo = new Mazo;
+        $mazo2= new Mazo;
+        $carta1= new Cartas("Basto", 1);
+        $carta2= new Cartas("Basto", 2);
+        $carta3= new Cartas("Basto", 3);
+        $carta4= new Cartas("Basto", 4);
+        $carta5= new Cartas("Basto", 5);
+        $mazo->agregarCarta($carta1);
+        $mazo->agregarCarta($carta2);
+        $mazo->agregarCarta($carta3);
+        $mazo->agregarCarta($carta4);
+        $mazo->agregarCarta($carta5);
+        $mazo2->agregarCarta($carta1);
+        $mazo2->agregarCarta($carta2);
+        $mazo2->agregarCarta($carta3);
+        $mazo2->agregarCarta($carta4);
+        $mazo2->agregarCarta($carta5);
         $this->assertTrue($mazo->mezclar());
+        $this->assertNotEquals($mazo, $mazo2);
     }
 	
     public function testVacio(){
