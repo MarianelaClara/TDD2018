@@ -8,8 +8,10 @@ class Cartas {
     protected $numero;
 
     public function __construct($palo, $numero){
-        
-        $this->numero= $numero;
+        if($numero <= 0 || $numero>12)
+            $this->numero= 1;
+        else
+            $this->numero= $numero;
         if($palo%4 ==0)
             $this->palo= "Oro";
         elseif($palo%4 ==1)
