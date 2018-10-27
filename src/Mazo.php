@@ -25,6 +25,18 @@ class Mazo {
     return TRUE;
   }
 
+  public function cortar() {
+    $mitadInf=[];
+    $mitadSup=[];
+    $mitad= count($this->cajita)/2;
+    for($i=0; $i<$mitad; $i++)
+      $mitadInf[$i]=$this->cajita[$i];
+    for($i=0; $mitad<count($this->cajita); $i++, $mitad++)
+      $mitadSup[$i]= $this->cajita[$mitad];
+    $this->cajita=array_merge($mitadSup, $mitadInf);
+    return TRUE;
+  }
+
   public function vacio() {
     if($this->cantcartas == -1)
       return TRUE;
