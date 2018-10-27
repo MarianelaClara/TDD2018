@@ -17,11 +17,11 @@ class MazoTest extends TestCase {
     public function testMezclable() {
         $mazo = new Mazo;
         $mazo2= new Mazo;
-        $carta1= new Cartas("Basto", 1);
-        $carta2= new Cartas("Basto", 2);
-        $carta3= new Cartas("Basto", 3);
-        $carta4= new Cartas("Basto", 4);
-        $carta5= new Cartas("Basto", 5);
+        $carta1= new Cartas(2, 1);
+        $carta2= new Cartas(2, 2);
+        $carta3= new Cartas(2, 3);
+        $carta4= new Cartas(2, 4);
+        $carta5= new Cartas(2, 5);
         $mazo->agregarCarta($carta1);
         $mazo->agregarCarta($carta2);
         $mazo->agregarCarta($carta3);
@@ -43,15 +43,16 @@ class MazoTest extends TestCase {
 
     public function testAgregarCarta() {
         $mazo= new Mazo;
-        $mazoVacio= new Mazo;
-        $carta= new Cartas("Basto", 3);
+        $this->assertEquals($mazo->obtenerCant(), 0);
+        $carta= new Cartas(2, 3);
         $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertEquals($mazo->obtenerCant(), 1);
     }
 
     public function testCantidadCartas(){
         $mazo= new Mazo;
         $this->assertEquals($mazo->obtenerCant(),0);
-        $carta= new Cartas("Basto", 3);
+        $carta= new Cartas( 2, 3);
         $mazo->agregarCarta($carta);
         $this->assertEquals($mazo->obtenerCant(),1);
         $mazo->agregarCarta($carta);
@@ -62,8 +63,8 @@ class MazoTest extends TestCase {
 
     public function testDevolverCarta(){
         $mazo= new Mazo;
-        $carta1= new Cartas("Basto", 3);
-        $carta2= new Cartas("Oro", 1);
+        $carta1= new Cartas( 0, 3);
+        $carta2= new Cartas( 1, 1);
         $this->assertFalse($mazo->sacar());
         $mazo->agregarCarta($carta1);
         $mazo->agregarCarta($carta2);
