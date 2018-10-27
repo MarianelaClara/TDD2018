@@ -12,11 +12,11 @@ class Cartas {
         $this->numero= $numero;
         if($palo%4 ==0)
             $this->palo= "Oro";
-        if($palo%4 ==1)
+        elseif($palo%4 ==1)
             $this->palo= "Basto";
-        if($palo%4 ==2)
+        elseif($palo%4 ==2)
             $this->palo= "Copa";
-        if($palo%4 ==3)
+        elseif($palo%4 ==3)
             $this->palo= "Espada";
     }
 

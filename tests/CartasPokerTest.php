@@ -31,7 +31,7 @@ class CartasPokerTest extends TestCase {
         $this->assertEquals($cartas->obtenerNumero(), 3);
         $cartas = new CartasPoker(0, 10);
         $this->assertEquals($cartas->obtenerNumero(), "J");
-        $cartas = new CartasPoker(0, 15);
-        $this->assertEquals($cartas->obtenerNumero(), 2);
+        $cartas = new CartasPoker(0, 14);
+        $this->assertEquals($cartas->obtenerNumero(), 1);
 	}
 }
