@@ -4,7 +4,7 @@ namespace TDD;
 
 use PHPUnit\Framework\TestCase;
 
-class CartasEspañolasTest extends TestCase {
+class CartasTest extends TestCase {
 
 	public function testExiste(){
 		$cartas = new Cartas(3, 3);
