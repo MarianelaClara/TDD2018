@@ -29,5 +29,7 @@ class CartasTest extends TestCase {
 	public function testNumero() {
 		$cartas = new Cartas(0, 3);
 		$this->assertEquals($cartas->obtenerNumero(), 3);
+		$cartas = new Cartas(0, 20);
+		$this->assertEquals($cartas->obtenerNumero(), 1);
 	}
 }
