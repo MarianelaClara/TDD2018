@@ -7,26 +7,26 @@ class Cartas {
     protected $palo;
     protected $numero;
 
-    public function __construct($palo, $numero){
-        if($numero <= 0 || $numero>12)
-            $this->numero= 1;
+    public function __construct($palo, $numero) {
+        if ($numero <= 0 || $numero > 12)
+            $this->numero = 1;
         else
-            $this->numero= $numero;
-        if($palo%4 ==0)
-            $this->palo= "Oro";
-        elseif($palo%4 ==1)
-            $this->palo= "Basto";
-        elseif($palo%4 ==2)
-            $this->palo= "Copa";
-        elseif($palo%4 ==3)
-            $this->palo= "Espada";
+            $this->numero = $numero;
+        if ($palo % 4 == 0)
+            $this->palo = "Oro";
+        elseif ($palo % 4 == 1)
+            $this->palo = "Basto";
+        elseif ($palo % 4 == 2)
+            $this->palo = "Copa";
+        elseif ($palo % 4 == 3)
+            $this->palo = "Espada";
     }
 
-    public function obtenerPalo(){
+    public function obtenerPalo() {
         return $this->palo;
     }
 
-    public function obtenerNumero(){
+    public function obtenerNumero() {
         return $this->numero;
     }
 }
