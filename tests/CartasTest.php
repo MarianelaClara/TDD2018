@@ -5,12 +5,16 @@ namespace TDD;
 use PHPUnit\Framework\TestCase;
 
 class CartasTest extends TestCase {
-
+    /**
+     * Valida que se puedan crear cartas.
+     */
 	public function testExiste(){
 		$cartas = new Cartas(3, 3);
 		$this->assertTrue(isset($cartas));
 	}
-
+    /**
+     * Valida que el palo de la carta sea el correspondiente.
+     */
 	public function testPalo() {
 		$cartas = new Cartas(0, 3);
 		$this->assertEquals($cartas->obtenerPalo(),"Oro");
@@ -25,7 +29,9 @@ class CartasTest extends TestCase {
 		$cartas = new Cartas(5, 3);
 		$this->assertEquals($cartas->obtenerPalo(),"Basto");
 	}
-
+    /**
+     * Valida que el numero de la carta sea con el que se creo.
+     */
 	public function testNumero() {
 		$cartas = new Cartas(0, 3);
 		$this->assertEquals($cartas->obtenerNumero(), 3);

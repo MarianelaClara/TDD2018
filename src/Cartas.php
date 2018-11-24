@@ -7,6 +7,18 @@ class Cartas {
     protected $palo;
     protected $numero;
 
+/**
+ * Le da los parametros iniciales a la carta.
+ *
+ * @param string $palo
+ *   Es el palo de la carta a crear.
+ *
+ * @param int $numero
+ *    El numero de la carta a crear.
+ * 
+ * @return
+ */
+
     public function __construct($palo, $numero) {
         if ($numero <= 0 || $numero > 12)
             $this->numero = 1;
@@ -22,9 +34,27 @@ class Cartas {
             $this->palo = "Espada";
     }
 
+/**
+ * Obtiene el palo de la carta.
+ *
+ * @param
+ *
+ * @return string
+ *   Devuelve el palo de la carta.
+ */
+
     public function obtenerPalo() {
         return $this->palo;
     }
+
+/**
+ * Obtiene el numero de la carta .
+ *
+ * @param
+ *
+ * @return int
+ *   Devuelve el numero de la carta.
+ */
 
     public function obtenerNumero() {
         return $this->numero;

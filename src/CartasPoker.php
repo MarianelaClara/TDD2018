@@ -3,6 +3,17 @@
 namespace TDD;
 
 class CartasPoker extends Cartas {
+/**
+ * Le da los parametros iniciales a la carta.
+ *
+ * @param int $palo
+ *   Es el numero que representara al palo de la carta.
+ *
+ * @param int $numero
+ *    El numero de la carta a crear.
+ * 
+ * @return
+ */
 
     public function __construct($palo = 1, $numero = 1) {
         if ($numero <= 0 || $numero > 12)
